@@ -1,109 +1,53 @@
 # Challenge 21 : MERN Book Search Engine
-  ![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
 
-## Description
+## License
 
-Using MERN, a full stack application for a book search engine is created. Users are able to  login/signup, search, and saved books.
+![License](https://img.shields.io/badge/license-MIT-00beef)
 
-Link to Heroku Deployed App: (https://sleepy-reef-74374.herokuapp.com/ )
+## Table of Contents
 
-## Installation
-install  
-npm, node, express, apollo, mongoose, react, graph ql, jwt, bootstrap, nodemon, concurrently
-- npm init 
-- npm install
-- npm start
+[Description](#description)
 
+[Demo](#demo)
 
-## Usage
-Users are able to search and save book from Google Books API with the MERN stack application that uses GraphQL built with Apollo Server.
+[Installation](#installation)
 
-## User Story from MSU Boot Camp
-AS AN avid reader
-I WANT to search for new books to read
-SO THAT I can keep a list of books to purchase
+[Issues](#Issues)
 
-## Acceptance Criteria from MSU Boot Camp
-GIVEN a book search engine
+### Description
 
-WHEN I load the search engine
-THEN I am presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button
+This is a fully functioning Goole Books API search engine that was originally built with a RESTful API and refactored to be a GraphQL API built with the Apollo Server. It was built with the MERN Stack with the capability to login and save your favorite books.
 
-WHEN I click on the Search for Books menu option
-THEN I am presented with an input field to search for books and a submit button
-WHEN I am not logged in and enter a search term in the input field and click the submit button
+### Demo
 
-THEN I am presented with several search results, each featuring a book’s title, author, description, image, and a link to that book on the Google Books site
+Link to Heroku Site [click here](https://boiling-ocean-18691.herokuapp.com/)
 
-WHEN I click on the Login/Signup menu option
-THEN a modal appears on the screen with a toggle between the option to log in or sign up
+Book search
 
-WHEN the toggle is set to Signup
-THEN I am presented with three inputs for a username, an email address, and a password, and a signup button
+![Screenshot](https://github.com/MartaS333/Browser_Text_editor_PWA/blob/main/assets/manifest.png)
 
-WHEN the toggle is set to Login
-THEN I am presented with two inputs for an email address and a password and login button
+Saved Book
 
-WHEN I enter a valid email address and create a password and click on the signup button
-THEN my user account is created and I am logged in to the site
+![Screenshot](https://github.com/MartaS333/Browser_Text_editor_PWA/blob/main/assets/serviceworkers.png)
 
-WHEN I enter my account’s email address and password and click on the login button
-THEN I the modal closes and I am logged in to the site
+### Installation
 
-WHEN I am logged in to the site
-THEN the menu options change to Search for Books, an option to see my saved books, and Logout
+1. First clone the repo
 
-WHEN I am logged in and enter a search term in the input field and click the submit button
-THEN I am presented with several search results, each featuring a book’s title, author, description, image, and a link to that book on the Google Books site and a button to save a book to my account
+2. install NPM packages
 
-WHEN I click on the Save button on a book
-THEN that book’s information is saved to my account
+```sh
+npm i
+```
 
-WHEN I click on the option to see my saved books
-THEN I am presented with all of the books I have saved to my account, each featuring the book’s title, author, description, image, and a link to that book on the Google Books site and a button to remove a book from my account
+3.  Start the server
 
-WHEN I click on the Remove button on a book
-THEN that book is deleted from my saved books list
+```sh
+npm start
+```
 
-WHEN I click on the Logout button
-THEN I am logged out of the site and presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button  
+4.  Make sure to look at the dependencies if you are having any issues starting the app
 
+### Issues
 
-## Contributions/Licenses/Links
-
-Heroku Deloyed: https://sleepy-reef-74374.herokuapp.com/ 
-
-Github Repo: https://github.com/pppreap/challenge21_mernbooksearch
-
-## Assets
-These are images for the working app: Login/Signup, homepage, saved books list, search, and  delete book.
-![home](./assets/start.png)
-![search](./assets/notloginorsaved.png)
-![signup/login](./assets/login.png)
-![save](./assets/saveoption.com.png)
-![savedbook](./assets/savedbook.png)
-![delete](./assets/delete.png)
-
-
-## Licenses
-![badge](https://img.shields.io/badge/license-MIT-brightgreen)
-<br />
-This application is covered by the MIT license. 
-
-## Credits
-MSU Coding Boot Camp, Google Books API, Heroku
-
-## Tests
-None 
-
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-
-## Questions
-Any question Contact Me :<br/>
-Github Username: https://github.com/pppreap <br/>
-Contact Email: pppreap@gmail.com
-
+The biggest issue I encountered was descrepencies with the PORT when doing `npm run build` in the client folder. There was another app I had created on PORT 3000, which kept being loaded instead of the Book Search (even after killing the PORT). I still want to do some troubleshooting because I am unsure of the exact cause. My solution for now was changing `"start": "react-scripts start"` to `"start": "set PORT=3001 && react-scripts start"` in the client package.json file.
