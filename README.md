@@ -1,4 +1,4 @@
-# Challenge 21 : MERN Book Search Engine
+# MERN Book Search Engine
 
 ## License
 
@@ -28,7 +28,7 @@ Book search
 
 Saved Book
 
-![Screenshot](https://github.com/MartaS333/Browser_Text_editor_PWA/blob/main/assets/serviceworkers.png)
+![Screenshot](https://github.com/MartaS333/book_search_MERN/blob/main/assets/saved.png)
 
 ### Installation
 
