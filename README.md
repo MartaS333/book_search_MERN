@@ -24,7 +24,7 @@ Link to Heroku Site [click here](https://boiling-ocean-18691.herokuapp.com/)
 
 Book search
 
-![Screenshot](https://github.com/MartaS333/Browser_Text_editor_PWA/blob/main/assets/manifest.png)
+![Screenshot](https://github.com/MartaS333/book_search_MERN/blob/main/assets/screenshot.png)
 
 Saved Book
 
